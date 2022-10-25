@@ -1,11 +1,228 @@
+$altoEnFooter: 10px;
 @import "bootstrap/bootstrap.scss";
+@import "_mixxx.scss";
+@import "_variables";
 
-div{
-    background-color: aqua;
-    height: 100px;
-    h1{
-        color: black;
-    }
-    h2{color: royalblue;}
-    h3{color:red}
+//reset css
+:root{
+    --color-primario:#181818;
+    --color-secundario:#f0f0f0;
+    --tipo-principal: helvetica, arial, sans-serif;
+    --tipo-secundaria: verdana;
+
 }
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+img, picture, video, iframe, figure{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+form, input, textarea, select, button, label, a{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+}
+::selection{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+body{
+
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    line-height: 1.4em;
+    font-smooth: always;
+   
+         
+}
+//nav part
+nav{
+    min-height: 8vh;
+    min-width: 100%;
+    background-color: rgb(10, 8, 8);
+    img{
+        object-fit: cover;
+        width: 40px;
+    }
+}
+
+//main part
+
+main{
+    
+    min-height: 80vh;
+    height: 100%;
+    .section-main{
+        height: 100%;
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr;
+    .text-main{
+        margin: 10px;
+        flex-direction: column;
+        grid-area: parrafo;
+        align-items: center;
+        justify-content: center;
+    }
+    p{
+        
+        width: 70%;
+        text-align: justify;
+    }
+    img{
+        width: 60%;
+        grid-area: imagen;;
+    }
+    grid-template-areas: "parrafo imagen";
+    }
+
+}
+//footer part
+footer{
+    display: block;
+    margin-top: auto;
+    color: #f0f0f0;
+    min-width: none;
+    width:100%;
+    height: 100%;
+    .foot-end{
+        text-align: center;
+    }
+    .footer__container{
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        @include flexy(row,center,space-evenly);
+        
+        margin-top: 0px;
+        border:solid 0.5px rgb(70, 72, 73);
+        
+       
+
+        .footer__container-column{
+            height: 100%;
+        
+
+        ul {
+                
+                width: 100%;
+                li{
+                    text-decoration: none;
+                    list-style: none;
+                    height: $altoEnFooter*2 ;
+                    margin-top: $altoEnFooter/2;
+                    a{
+                        text-decoration-line: none;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            display: inline-block;
+                        }
+                    }
+                    }
+                
+                }
+                
+                
+                
+                
+                .footer__container-h6{
+                    text-align: center;
+                    display: block;
+                }
+                
+                
+                .foot-b{
+                    font-size: 9px;
+                    height: $altoEnFooter;
+                    margin: 12px;
+                    margin-right: 3px;
+                }
+                
+                 .fp{
+                    @extend .foot-b;
+                    font-style: italic;
+                    
+                }
+                 .foot-end{
+                    margin: auto;
+     text-align: center;               
+     display: block;
+                    height: 100%;
+                }
+                
+            }
+    }}
+    //  QUUUUUEEEEERYYYYYSSSS 
+@media screen and (max-width:580px) {
+body{
+    height: 100%;
+}
+    nav{
+    .custom-toggler .navbar-toggler {
+        background-color: rgb(255,102,203) ;
+    }
+    ul{
+        li{
+            align-items: center;
+            text-align: center;
+        }
+    }
+    min-height: 100%;
+    z-index: 0;
+}
+    main {
+
+        @include flexy(column,center,center);
+        margin: 10px 10px 10px 10px;
+        .section-main{
+display: block;
+width: 100%;
+.text-main{
+    display: block;
+    text-align: justify;
+    width: 90%;
+    p {
+        width: 95%;
+        margin: auto;
+    }
+    h1{
+        margin: auto;
+        text-align: center;
+    }
+}
+.img-main{
+    display: block;
+    margin: auto;
+    @include flexy(row, center,center)
+}
+        }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+footer .col-3{
+    height: 100%;
+    width: 100%;
+}
+
+
+}}
+// fin de las querys

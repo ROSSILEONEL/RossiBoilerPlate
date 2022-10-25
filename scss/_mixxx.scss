@@ -1,0 +1,13 @@
+@mixin flexy($direction,$align,$justi) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justi;
+}
+
+@mixin gridy($columnas ,$filas, $espacio){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: $filas;
+    gap: $espacio;
+}

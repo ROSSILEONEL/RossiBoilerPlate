@@ -8386,14 +8386,169 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+:root {
+  --color-primario:#181818;
+  --color-secundario:#f0f0f0;
+  --tipo-principal: helvetica, arial, sans-serif;
+  --tipo-secundaria: verdana; }
 
-    /* MI CSS STYLOSO */
-div {
-  background-color: aqua;
-  height: 100px; }
-  div h1, div .h1 {
-    color: black; }
-  div h2, div .h2 {
-    color: royalblue; }
-  div h3, div .h3 {
-    color: red; }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center; }
+
+form, input, textarea, select, button, label, a {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit; }
+
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario); }
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  line-height: 1.4em;
+  font-smooth: always; }
+
+nav {
+  min-height: 8vh;
+  min-width: 100%;
+  background-color: #0a0808; }
+  nav img {
+    object-fit: cover;
+    width: 40px; }
+
+main {
+  min-height: 80vh;
+  height: 100%; }
+  main .section-main {
+    height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "parrafo imagen"; }
+    main .section-main .text-main {
+      margin: 10px;
+      flex-direction: column;
+      grid-area: parrafo;
+      align-items: center;
+      justify-content: center; }
+    main .section-main p {
+      width: 70%;
+      text-align: justify; }
+    main .section-main img {
+      width: 60%;
+      grid-area: imagen; }
+
+footer {
+  display: block;
+  margin-top: auto;
+  color: #f0f0f0;
+  min-width: none;
+  width: 100%;
+  height: 100%; }
+  footer .foot-end {
+    text-align: center; }
+  footer .footer__container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    border: solid 0.5px #464849; }
+    footer .footer__container .footer__container-column {
+      height: 100%; }
+      footer .footer__container .footer__container-column ul {
+        width: 100%; }
+        footer .footer__container .footer__container-column ul li {
+          text-decoration: none;
+          list-style: none;
+          height: 20px;
+          margin-top: 5px; }
+          footer .footer__container .footer__container-column ul li a {
+            text-decoration-line: none; }
+            footer .footer__container .footer__container-column ul li a img {
+              width: 20px;
+              height: 20px;
+              display: inline-block; }
+      footer .footer__container .footer__container-column .footer__container-h6 {
+        text-align: center;
+        display: block; }
+      footer .footer__container .footer__container-column .foot-b, footer .footer__container .footer__container-column .fp {
+        font-size: 9px;
+        height: 10px;
+        margin: 12px;
+        margin-right: 3px; }
+      footer .footer__container .footer__container-column .fp {
+        font-style: italic; }
+      footer .footer__container .footer__container-column .foot-end {
+        margin: auto;
+        text-align: center;
+        display: block;
+        height: 100%; }
+
+@media screen and (max-width: 580px) {
+  body {
+    height: 100%; }
+  nav {
+    min-height: 100%;
+    z-index: 0; }
+    nav .custom-toggler .navbar-toggler {
+      background-color: #ff66cb; }
+    nav ul li {
+      align-items: center;
+      text-align: center; }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 10px 10px; }
+    main .section-main {
+      display: block;
+      width: 100%; }
+      main .section-main .text-main {
+        display: block;
+        text-align: justify;
+        width: 90%; }
+        main .section-main .text-main p {
+          width: 95%;
+          margin: auto; }
+        main .section-main .text-main h1, main .section-main .text-main .h1 {
+          margin: auto;
+          text-align: center; }
+      main .section-main .img-main {
+        display: block;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; }
+    main footer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; }
+    main footer .col-3 {
+      height: 100%;
+      width: 100%; } }
