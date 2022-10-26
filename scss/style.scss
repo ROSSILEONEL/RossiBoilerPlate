@@ -46,6 +46,7 @@ body{
     background-color: var(--color-secundario);
     line-height: 1.4em;
     font-smooth: always;
+    background-color: $color-principal;
    
          
 }
@@ -60,10 +61,11 @@ nav{
     }
 }
 
-//main part
+//main part-------------------------------------------------------
 
 main{
-    
+    margin: 0;
+    padding: 0;
     min-height: 80vh;
     height: 100%;
     .section-main{
@@ -92,7 +94,7 @@ main{
     }
 
 }
-//footer part
+//footer part-----------------------------------------------
 footer{
     display: block;
     margin-top: auto;
@@ -168,61 +170,186 @@ footer{
                 
             }
     }}
-    //  QUUUUUEEEEERYYYYYSSSS 
-@media screen and (max-width:580px) {
-body{
-    height: 100%;
+
+    // PRODUCTOS PAGE-----------------------------------
+    .nav__prod{
+        background-color: $color-principal;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
 }
-    nav{
-    .custom-toggler .navbar-toggler {
-        background-color: rgb(255,102,203) ;
+
+.catalogo{
+    gap: 5px;
+    .container-fluid{
+        
+        align-items: center;
+        justify-content: center;
+
+        .catalogo__card .card{
+            height: 200px;
+            opacity: 0.8;
+            width: 12rem;  
+
+            img{
+                
+                opacity: 0.5;
+            }       
+        }
     }
-    ul{
-        li{
+}
+.container-fluid{
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.catalogo__h1{
+    text-align: center;
+    color: $color-principal;
+    background-color: $color-secundario;
+    opacity: 0.9;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+    .main__prod{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        @include flexy(column,center,center)
+    }
+    // CONOCENOOOOOSSSS---------------------------------------------
+    .contacto form .content_contacto img{
+        animation-name: movimiento;
+        width: 20%;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        display: block;
+        height: 20%;
+        margin: auto;
+    }
+    .contacto {
+        width: 100%;
+        @include flexy(row,center,center);
+        .content_contacto{
+            margin: auto;
+            width: 60%;
+            padding: 30px;
+            border: solid 2px $color-secundario;
+            border-top: none;
+            border-bottom: none;
+        }
+        .footer__container-input{
+            display: block;
+            
+        }
+        .form__input{
+            background-color: $color-secundario;
+            color: $color-principal;
+            margin: auto;
+            width: 120px;
+            border-radius: 5%;
+
+    }}
+@keyframes movimiento{
+0%{margin-left: 0%;}
+50%{margin-left: 65%;}
+100%{margin-left: 0%;}
+
+}
+.contacto form  :hover{
+    background-color: rgb(205, 183, 214);
+    
+}
+    
+    //  QUUUUUEEEEERYYYYYSSSS ----------------------------------------------
+@media screen and (max-width:580px) {
+    body{
+        height: 100%;
+    }
+        nav{
+            min-height: 100%;
+    
+            ul{
+                li{
+                    align-items: center;
+                    text-align: center;
+                }
+             }
+        }
+ 
+
+    main{
+         @include flexy(column,center,center);
+         .section-main{
+         display: block;
+            width: 100%;
+                        .text-main{
+                            display: block;
+                            text-align: justify;
+                            width: 90%;
+                                    p {
+                                        width: 95%;
+                                        margin: auto;
+                                    }
+                                    h1{
+                                        margin: auto;
+                                        text-align: center;
+                                    }
+                                   }
+                        .img-main{
+                            display: block;
+                            margin: auto;
+                            @include flexy(row, center,center)
+                        }
+       
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    footer .col-3{
+        height: 100%;
+        width: 100%;
+    }}
+
+    .catalogo{
+        gap: 0px;
+        .container-fluid{
+            gap: 0px;
             align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .catalogo__card{
+                width: 20rem;
+                           }
+                        }
+               }
+
+// conocenos QUERYS--------------------------- 
+.contacto {
+    width: 100%;
+    .form{
+        
+        .form-label{
+            text-align: center;
+            background-color: $color-secundario;
+            color: $color-principal;
+            font-size: 0.9rem;
+        }
+        .form__container-h1{
             text-align: center;
         }
-    }
-    min-height: 100%;
-    z-index: 0;
-}
-    main {
+        .content_contacto{
+            padding: 0px;
+            margin: 0;
+            width: 100%;
+            border: none;
+            
+                        }
+           }}
 
-        @include flexy(column,center,center);
-        margin: 10px 10px 10px 10px;
-        .section-main{
-display: block;
-width: 100%;
-.text-main{
-    display: block;
-    text-align: justify;
-    width: 90%;
-    p {
-        width: 95%;
-        margin: auto;
-    }
-    h1{
-        margin: auto;
-        text-align: center;
-    }
-}
-.img-main{
-    display: block;
-    margin: auto;
-    @include flexy(row, center,center)
-}
-        }
-
-footer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-footer .col-3{
-    height: 100%;
-    width: 100%;
-}
-
-
-}}
+        }}
 // fin de las querys

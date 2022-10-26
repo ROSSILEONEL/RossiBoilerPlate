@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="./js/bootstrap.min.js">
     <link rel="stylesheet" href="popper.min.js"> -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Lazy Skateboarin</title>
 </head>
 <body>
@@ -71,36 +71,65 @@
 
 </main>
 <!-- FOOTER -->
-<footer class="row bg-dark fs-6">
-    <div class="col-3 fs-6">
-        <h6>Hace tu pedido</h6>
-        <p>+541136468454</p>
-        <p>leonelrossi@gmail.com</p>
-        <p>Monteagudo 1485</p>
-    </div>
-    <div class="col-3">
-        
-        <h6>Creador Digital</h6>
-        <p>Envios a todo Argentina</p>
-        <p>Pick up</p>
-        <p>Colegiales  -  Florencio Varela</p>
-        
-        
-    </div>
-    <div class="col-3">
-        
-        <ul>
-            <li><a href="https://www.instagram.com/lazyskateboring/"><img src="./img/instagram.png" alt=""></a>Instagram</li>
-            <li><a href="https://www.facebook.com/"><img src="./img/facebook.png" alt=""></a> Facebook</li>
-            <li><a href=""><img src="./img/whatsapp.png" alt=""></a>Whatsapp</li>
-        </ul>
-        
-    </div>
+<footer class=" footer bg-dark ">
+    <!-- contenedor principal del footer -->
+            <div class="footer__container bg-dark">
+                <!-- PRIMER BLOQUE DEL FOOT  -->
+            <div class="footer__container-column  ">
+                <h6 class="footer__container-h6">Hace tu pedido</h6>
+                    <p class="fp">+541136468454</p>
+                    <p class="fp">leonelrossi@gmail.com</p>
+                    <p class="fp">Monteagudo 1485</p>
+            </div>
+            <!-- SEGUNDO BLOQUE DEL FOOT  -->
+            
+            <div class="footer__container-column ">
+                <h6 class="footer__container-h6">Creador Digital</h6>
+                <p class="fp">Envios a todo Argentina</p>
+                <p class="fp">Pick up</p>
+                <p class="fp">Colegiales  -  Florencio Varela</p>
+            </div>
+               
+                    
+                <!-- TERCER BLOQUE DEL FOOT -->
+            <div class="footer__container-column ">
+                    <h6 class="footer__container-h6">Redes</h6>
+                    <!-- <p class="fp">Seguinos</p> -->
+                    <ul>
+                        <li class="fp" >
+                            <a href="https://www.instagram.com/lazyskateboring/">
+                                <img class="footer__container-img img-fluid" src="../img/instagram.png" alt="">
+                                <spam class="foot-b">Instagram</spam>
+                            </a>
+                    
+                    </li>
     
-    
-    <div class="col-3">Si, dice boring</div>
-</footer>
-<script src="js/bootstrap.min.js"></script>
+                    <li class="fp">
+                            <a href="https://www.facebook.com/">
+                            <img class="footer__container-img img-fluid" src="../img/facebook.png" alt="">
+                            <spam class="foot-b">Facebook</spam>
+                            </a>
+                    </li>
+                        <li class="fp">
+                            <a href="">
+                                <img class="footer__container-img img-fluid" src="../img/whatsapp.png" alt="">
+                                <spam class="foot-b">Whatsapp</spam> </a> 
+                        </li>
+                    </ul>
+               
+            </div>
+            <!-- CUARTO BLOQUE DEL FOOT  -->
+            <div class=" footer__container-column">
+                <h6 class="footer__container-h6">Lazy</h6><p>SI, DICE BORING</p>
+            </div>
+        </div>
+            <br>
+                
+                <div class="foot-end">
+                <small>&copy; 2022 <b>Lazy SB</b> - Todos los derechos reservados </small>
+                </div>    
+            </footer>
+<script src="../js/bootstrap.min.js"></script>
     <script src="popper.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <link rel="stylesheet" href="https://unpkg.com/@popperjs/core@2">
