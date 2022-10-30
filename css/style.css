@@ -8529,6 +8529,17 @@ footer {
       .catalogo .container-fluid .catalogo__card .card img, .catalogo .container-sm .catalogo__card .card img, .catalogo .container-md .catalogo__card .card img, .catalogo .container-lg .catalogo__card .card img, .catalogo .container-xl .catalogo__card .card img, .catalogo .container-xxl .catalogo__card .card img {
         opacity: 0.5; }
 
+.catalogo__card {
+  max-height: 400px;
+  min-width: 10rem;
+  width: 30%;
+  height: 25rem; }
+  .catalogo__card .card-img-top {
+    object-fit: contain;
+    height: 100%; }
+  .catalogo__card .card-body {
+    height: 40%; }
+
 
 .container-fluid,
 .container-sm,

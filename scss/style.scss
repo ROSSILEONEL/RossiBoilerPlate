@@ -197,6 +197,29 @@ footer{
             }       
         }
     }
+
+    
+}
+
+
+// cartas 
+.catalogo__card{
+    
+    max-height: 400px;
+    min-width: 10rem;
+    width: 30%;
+    height: 25rem;
+// imagen carta
+    .card-img-top{
+        object-fit: contain;
+        height: 100%;
+        }
+
+        // card body 
+        .card-body{
+            height: 40%;
+        }
+   
 }
 .container-fluid{
     gap: 1rem;
@@ -384,8 +407,8 @@ footer{
                 vertical-align: 0;
             }
             .fp{
-               display: block;
-               
+                
+                display: block;
                 margin-top: 0px;
                 font-size: 14px;
             }
