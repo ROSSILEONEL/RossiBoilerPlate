@@ -8534,14 +8534,17 @@ footer {
         opacity: 0.5; }
 
 .catalogo__card {
-  max-height: 400px;
+  min-height: 450px;
   min-width: 10rem;
   width: 30%;
   height: 24rem;
   margin-top: 2px; }
   .catalogo__card .card-img-top {
     object-fit: contain;
-    height: 100%; }
+    max-height: 49%;
+    max-width: 50%;
+    justify-content: center;
+    margin: auto; }
   .catalogo__card .card-body {
     min-height: 45%;
     padding: 0;
