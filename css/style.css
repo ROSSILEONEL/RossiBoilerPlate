@@ -8436,6 +8436,11 @@ nav {
     object-fit: cover;
     width: 40px; }
 
+.text-main-h1 {
+  background-color: #181818;
+  color: #fffbe2;
+  width: 50%; }
+
 main {
   margin: 0;
   padding: 0;
@@ -8499,12 +8504,10 @@ footer {
         text-align: center;
         display: block; }
       footer .footer__container .footer__container-column .foot-b, footer .footer__container .footer__container-column .fp {
-        font-size: 9px;
+        font-size: 11px;
         height: 10px;
         margin: 12px;
         margin-right: 3px; }
-      footer .footer__container .footer__container-column .fp {
-        font-style: italic; }
       footer .footer__container .footer__container-column .foot-end {
         margin: auto;
         text-align: center;
@@ -8520,6 +8523,7 @@ footer {
 .catalogo {
   gap: 5px; }
   .catalogo .container-fluid, .catalogo .container-sm, .catalogo .container-md, .catalogo .container-lg, .catalogo .container-xl, .catalogo .container-xxl {
+    padding: 0;
     align-items: center;
     justify-content: center; }
     .catalogo .container-fluid .catalogo__card .card, .catalogo .container-sm .catalogo__card .card, .catalogo .container-md .catalogo__card .card, .catalogo .container-lg .catalogo__card .card, .catalogo .container-xl .catalogo__card .card, .catalogo .container-xxl .catalogo__card .card {
@@ -8533,12 +8537,23 @@ footer {
   max-height: 400px;
   min-width: 10rem;
   width: 30%;
-  height: 25rem; }
+  height: 24rem;
+  margin-top: 2px; }
   .catalogo__card .card-img-top {
     object-fit: contain;
     height: 100%; }
   .catalogo__card .card-body {
-    height: 40%; }
+    min-height: 45%;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .catalogo__card .card-body p {
+      margin-left: 3px;
+      margin-right: 3px;
+      text-align: start; }
 
 
 .container-fluid,
@@ -8612,6 +8627,50 @@ footer {
 .contacto form :hover {
   background-color: #cdb7d6; }
 
+.content-readers {
+  color: aliceblue; }
+  .content-readers h1, .content-readers .h1 {
+    background-color: #382c89;
+    color: #fffbe2;
+    text-align: center;
+    margin: 0; }
+
+.reader {
+  background-image: url("../img/foto2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.904)), url("../img/gale10.jpeg");
+  background-size: contain;
+  padding: 10px;
+  border-bottom: solid 1px gray; }
+  .reader .cards {
+    margin: auto; }
+    .reader .cards p {
+      color: gray; }
+    .reader .cards a {
+      display: block ruby; }
+    .reader .cards img {
+      border-radius: 50%; }
+
+.reader__dimagen {
+  width: 42%;
+  margin: auto;
+  padding: 0px 0px 10px 0px; }
+
+.img-readers {
+  object-fit: scale-down; }
+
+.galeria__h1 {
+  text-align: center; }
+
+.galeria__dimagen {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5px; }
+  .galeria__dimagen img {
+    object-fit: cover;
+    height: 100%; }
+
 @media screen and (max-width: 580px) {
   body {
     height: 100%; }
@@ -8620,7 +8679,10 @@ footer {
     nav ul li {
       align-items: center;
       text-align: center; }
+  .text-main-h1 {
+    width: 100%; }
   main {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8631,10 +8693,12 @@ footer {
       main .section-main .text-main {
         display: block;
         text-align: justify;
-        width: 90%; }
+        width: 100%;
+        margin: 0; }
         main .section-main .text-main p {
           width: 95%;
-          margin: auto; }
+          margin: auto;
+          padding: 3px; }
         main .section-main .text-main h1, main .section-main .text-main .h1 {
           margin: auto;
           text-align: center; }
@@ -8644,7 +8708,8 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        margin-bottom: 0; }
       main .section-main footer {
         display: flex;
         flex-direction: column;
@@ -8659,8 +8724,16 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column; }
-        main .catalogo .container-fluid .catalogo__card, main .catalogo .container-sm .catalogo__card, main .catalogo .container-md .catalogo__card, main .catalogo .container-lg .catalogo__card, main .catalogo .container-xl .catalogo__card, main .catalogo .container-xxl .catalogo__card {
-          width: 20rem; }
+    main .catalogo__card {
+      min-width: 100%;
+      margin: 0; }
+      main .catalogo__card .card-img-top {
+        object-fit: contain;
+        height: 100%; }
+      main .catalogo__card .card-body {
+        min-height: 45%;
+        padding: 0;
+        text-align: center; }
     main .contacto {
       width: 100%; }
       main .contacto .form .form-label {
@@ -8675,6 +8748,29 @@ footer {
         margin: 0;
         width: 100%;
         border: none; }
+  .reader {
+    flex-direction: column;
+    padding: 0px;
+    margin: auto; }
+    .reader .cards {
+      padding: 5px; }
+      .reader .cards a {
+        display: block ruby;
+        margin-bottom: 5px;
+        background-color: transparent; }
+      .reader .cards p {
+        color: #bdbdbd; }
+      .reader .cards .card-img-top {
+        border-radius: 50%;
+        border-color: solid 2px #9292eb; }
+      .reader .cards h5, .reader .cards .h5 {
+        text-align: center; }
+    .reader .reader__dimagen {
+      width: 100%;
+      margin: auto;
+      padding: 0; } }
+
+@media screen and (max-width: 580px) {
   footer {
     display: flex;
     flex-direction: column;
@@ -8714,4 +8810,10 @@ footer {
           justify-content: center;
           text-align: center; }
           footer .footer__container .footer__container-column ul li {
-            height: 15px; } }
+            height: 15px; }
+  .galeria__dimagen {
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr); }
+    .galeria__dimagen img {
+      object-fit: cover;
+      height: 100%; } }

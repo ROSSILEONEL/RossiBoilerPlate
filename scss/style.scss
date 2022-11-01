@@ -62,7 +62,11 @@ nav{
 }
 
 //main part-------------------------------------------------------
-
+.text-main-h1{
+    background-color: #181818;
+    color: $color-principal;
+    width: 50%;
+}
 main{
     margin: 0;
     padding: 0;
@@ -150,7 +154,7 @@ footer{
                 
                 
                 .foot-b{
-                    font-size: 9px;
+                    font-size: 11px;
                     height: $altoEnFooter;
                     margin: 12px;
                     margin-right: 3px;
@@ -158,7 +162,7 @@ footer{
                 
                  .fp{
                     @extend .foot-b;
-                    font-style: italic;
+                  
                     
                 }
                  .foot-end{
@@ -182,7 +186,7 @@ footer{
 .catalogo{
     gap: 5px;
     .container-fluid{
-        
+        padding: 0;
         align-items: center;
         justify-content: center;
 
@@ -208,7 +212,8 @@ footer{
     max-height: 400px;
     min-width: 10rem;
     width: 30%;
-    height: 25rem;
+    height: 24rem;
+    margin-top: 2px;
 // imagen carta
     .card-img-top{
         object-fit: contain;
@@ -217,7 +222,15 @@ footer{
 
         // card body 
         .card-body{
-            height: 40%;
+            min-height: 45%;
+            padding: 0;
+text-align: center;
+@include flexy(column,center,space-evenly);
+p{margin-left: 3px;
+    margin-right: 3px;
+text-align: start;}
+
+
         }
    
 }
@@ -285,7 +298,57 @@ footer{
     background-color: rgb(205, 183, 214);
     
 }
+
+// READERS-----------------------------------------------------
+.content-readers{
     
+    // filter: blur(6px);
+    color: aliceblue;
+    
+    h1{
+        background-color: $color-secundario;
+        color: $color-principal;
+        text-align: center;
+        margin: 0;
+    }
+}
+.reader{
+    background-image: url("../img/foto2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.904)), url("../img/gale10.jpeg");
+    background-size: contain;
+    padding: 10px;
+border-bottom: solid 1px gray;
+    .cards{
+      
+        margin: auto;
+p{color: gray;}
+a{display: block ruby;}
+
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+.reader__dimagen{
+    
+    width: 42%;
+    margin: auto;
+    padding: 0px 0px 10px 0px;}
+.img-readers{
+    object-fit: scale-down;
+}
+    // GALERIAAAAA----------------------------------------GALERIA
+    .galeria__h1{
+        text-align: center;
+    }
+    .galeria__dimagen{
+        height: 100%;
+        @include gridy(4,4,5px);
+    img{
+        object-fit: cover;
+        height: 100%;
+    }
+    }
     //  QUUUUUEEEEERYYYYYSSSS ----------------------------------------------
 @media screen and (max-width:580px) {
     body{
@@ -301,9 +364,14 @@ footer{
                 }
              }
         }
- 
+        .text-main-h1{
+            
+            width: 100%;
+        }
 
     main{
+       
+        min-height: 100%;
          @include flexy(column,center,center);
          .section-main{
          display: block;
@@ -311,20 +379,24 @@ footer{
                         .text-main{
                             display: block;
                             text-align: justify;
-                            width: 90%;
+                            width: 100%;
+                            margin: 0;
                                     p {
                                         width: 95%;
                                         margin: auto;
+                                        padding: 3px;
                                     }
                                     h1{
                                         margin: auto;
                                         text-align: center;
+
                                     }
                                    }
                         .img-main{
                             display: block;
                             margin: auto;
-                            @include flexy(row, center,center)
+                            @include flexy(row, center,center);
+                            margin-bottom:0;
                         }
        
 
@@ -337,7 +409,7 @@ footer{
         height: 100%;
         width: 100%;
     }}
-
+// PRODUCTOS QUERYS --------------------------------------->
     .catalogo{
         gap: 0px;
         .container-fluid{
@@ -345,11 +417,29 @@ footer{
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            .catalogo__card{
-                width: 20rem;
-                           }
+            
                         }
                }
+
+             
+.catalogo__card{
+    
+    min-width: 100%;
+    margin: 0;
+// imagen carta
+    .card-img-top{
+        object-fit: contain;
+        height: 100%;
+        }
+
+        // card body 
+        .card-body{
+            min-height: 45%;
+            padding: 0;
+text-align: center;
+        }
+   
+}
 
 // conocenos QUERYS--------------------------- 
 .contacto {
@@ -375,7 +465,46 @@ footer{
            }}
 
         }
-    // FOOTER----------------------------------------------------QUERYS
+        // querys READERS--------------------------------------------
+        // READERS-----------------------------------------------------
+
+.reader{
+    flex-direction: column;
+    padding: 0px;
+    margin: auto;
+    .cards{
+        padding: 5px;
+        a{
+          display: block ruby;
+          margin-bottom: 5px;
+          background-color: transparent;
+             }
+      
+        
+        p{color: rgb(189, 189, 189);}
+
+        .card-img-top{
+            border-radius: 50%;
+            border-color: solid 2px rgb(146, 146, 235) ;
+           
+        }
+        h5{text-align: center;}
+        
+}
+.reader__dimagen{
+    
+    width: 100%;
+    margin: auto;
+    padding: 0;}
+
+    
+    
+}
+}
+// fin de las querys
+
+// FOOTER----------------------------------------------------QUERYS
+@media screen and (max-width:580px) {
     footer{
         @include flexy(column,center,center);
         margin-top: auto;
@@ -388,10 +517,10 @@ footer{
         }
         .footer__container{
             
-            @include flexy(column,center,center);
+                @include flexy(column,center,center);
             
-            margin-top: 0px;
-            border:solid 0.5px rgb(70, 72, 73);
+                margin-top: 0px;
+                border:solid 0.5px rgb(70, 72, 73);
             
             
     
@@ -400,28 +529,37 @@ footer{
                 border: solid 0.5px $color-secundario;
                 width: 100%;
                 height: 10%;
-            // display: block;
-            .foooter__container-h6{
-                font-size: 14px;
-                font-style: bold;
-                vertical-align: 0;
-            }
-            .fp{
-                
-                display: block;
-                margin-top: 0px;
-                font-size: 14px;
-            }
-            ul{
+            
+                .foooter__container-h6{
+                    font-size: 14px;
+                    font-style: bold;
+                    vertical-align: 0;
+                }
 
+                .fp{
+                
+                    display: block;
+                    margin-top: 0px;
+                    font-size: 14px;
+                }
+            ul{
                 justify-content: center;
                 text-align: center;
-            li{
-                height: 15px;
+                    li{
+                        height: 15px;
+                        }
+
             }
-            }
-            }    
-    
-    
-            }}    }
-// fin de las querys
+                                    }
+                        }
+        }
+// galeria query ----- galeria query---galeria query
+.galeria__dimagen{
+    height: 100%;
+    grid-template-columns: repeat(2,1fr);
+img{
+    object-fit: cover;
+    height: 100%;
+}
+}
+                }   //cierre del query footer
