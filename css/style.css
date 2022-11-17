@@ -8429,42 +8429,57 @@ body {
   background-color: #fffbe2; }
 
 nav {
-  min-height: 8vh;
+  min-height: 10vh;
   min-width: 100%;
   background-color: #0a0808; }
   nav img {
     object-fit: cover;
     width: 40px; }
 
-.text-main-h1 {
-  background-color: #181818;
-  color: #fffbe2;
-  width: 50%; }
-
 main {
   margin: 0;
   padding: 0;
   min-height: 80vh;
   height: 100%; }
-  main .section-main {
+  main .main__section {
     height: 100%;
     min-width: 100%;
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "parrafo imagen"; }
-    main .section-main .text-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .main__section .main__section-text {
+      background-color: #1818181e;
+      backdrop-filter: blur(10px);
+      color: #fffbe2;
       margin: 10px;
       flex-direction: column;
-      grid-area: parrafo;
+      width: 80%;
+      height: 250px;
       align-items: center;
-      justify-content: center; }
-    main .section-main p {
-      width: 70%;
-      text-align: justify; }
-    main .section-main img {
-      width: 60%;
-      grid-area: imagen; }
+      justify-content: center;
+      border: solid 1px #fffbe2; }
+    main .main__section p {
+      padding: 10px;
+      width: 100%;
+      text-align: justify;
+      margin: auto; }
+  main .text-main-p {
+    font-size: 1em; }
+  main .main__dimagen-img {
+    width: 20%;
+    grid-area: imagen;
+    align-items: center;
+    margin: auto; }
+
+.main__home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.699)), url("../img/gale10.jpeg");
+  background-size: cover; }
+
+.text-main-h1 {
+  margin: auto;
+  color: #fffbe2;
+  width: 50%; }
 
 footer {
   display: block;
@@ -8518,9 +8533,17 @@ footer {
   background-color: #fffbe2;
   width: 100%;
   align-items: flex-end;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: sticky;
+  z-index: 10000;
+  top: 0;
+  border-bottom: solid 1px black; }
+
+.nav-item:hover {
+  background-color: #4b4091d0; }
 
 .catalogo {
+  z-index: 0;
   gap: 5px; }
   .catalogo .container-fluid, .catalogo .container-sm, .catalogo .container-md, .catalogo .container-lg, .catalogo .container-xl, .catalogo .container-xxl {
     padding: 0;
@@ -8820,3 +8843,9 @@ footer {
     .galeria__dimagen img {
       object-fit: cover;
       height: 100%; } }
+
+@media screen and (max-width: 580px) {
+  .main__section-text {
+    min-width: 100%; }
+  .text-main-p {
+    font-size: 0.5rem; } }
